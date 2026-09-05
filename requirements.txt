@@ -1,0 +1,3 @@
+# Only needed for the API path -- playing on a Claude subscription needs nothing
+# from pip, just the Claude Code CLI (npm install -g @anthropic-ai/claude-code).
+anthropic>=0.40

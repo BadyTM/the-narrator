@@ -1,0 +1,15 @@
+__pycache__/
+*.pyc
+
+# The player's own games
+saves/
+
+# Environments and editors
+.venv/
+venv/
+.idea/
+.vscode/
+
+# Windows / OneDrive leftovers
+desktop.ini
+Thumbs.db

@@ -1,0 +1,22 @@
+name: tests
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  test:
+    # Windows, because the game is: it looks for claude.cmd and sets a Windows app id.
+    runs-on: windows-latest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.13"
+
+      # No pip install: the anthropic package is optional and the tests fake both
+      # engines, so a bare interpreter with tkinter is the whole environment.
+      - name: Run the tests
+        run: python tests/run_all.py --headless
